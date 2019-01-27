@@ -1,0 +1,31 @@
+// ---------------------------------------------------------------
+// FLOAT
+// ---------------------------------------------------------------
+// configuração de variações
+$property: (
+    l: left,
+    r: right,
+    n: none,
+);
+
+// mixin
+@function float( $key, $map : $property ){
+    @return map-get($map, $key);
+}
+
+@mixin float($item) { property: float($item); }
+
+// gera as classes
+@each $scaleKey, $scaleValue in $property {
+    .f#{$scaleKey}{ float: $scaleValue; }
+}
+
+@each $bkKey, $bkValue in $breakpoints {
+    @if($bkValue != 0){
+        @media (min-width: $bkValue) {
+            @each $scaleKey, $scaleValue in $property {
+            @include ddScale( 'f', $bkKey, $scaleKey){ float: $scaleValue; }
+            }
+        }
+    }
+}

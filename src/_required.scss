@@ -1,0 +1,25 @@
+// ---------------------------------------------------------------
+// BREAKPOINTS
+// ---------------------------------------------------------------
+
+$breakpoint-separator: '\\:';
+
+$breakpoints: (
+    sm: 768px,
+    md: 992px,
+    lg: 1200px,
+);
+
+
+// ---------------------------------------------------------------
+// SCALE
+// ---------------------------------------------------------------
+@function dd( $name ){
+    @return $name+$breakpoint-separator;
+}
+
+@mixin ddScale( $className, $breakPointKey, $scaleKey){
+    .#{dd( $breakPointKey )}#{$className}#{$scaleKey}{
+        @content;
+    }
+}

@@ -1,0 +1,34 @@
+// ---------------------------------------------------------------
+// DISPLAY
+// ---------------------------------------------------------------
+// configuração de variações
+
+$property: (
+    b: block,
+    i: inline,
+    ib: inline-block,
+    t: table,
+    tc: table-cell,
+);
+
+// mixin
+@function display( $key, $map : $property ){
+    @return map-get($map, $key);
+}
+
+@mixin display($item) { property: display($item); }
+
+// gera as classes
+@each $scaleKey, $scaleValue in $property {
+    .d#{$scaleKey}{ display: $scaleValue; }
+}
+
+@each $bkKey, $bkValue in $breakpoints {
+    @if($bkValue != 0){
+        @media (min-width: $bkValue) {
+            @each $scaleKey, $scaleValue in $property {
+            @include ddScale( 'd', $bkKey, $scaleKey){ display: $scaleValue; }
+            }
+        }
+    }
+}

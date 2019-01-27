@@ -1,0 +1,31 @@
+// ---------------------------------------------------------------
+// TEXT ALIGN
+// ---------------------------------------------------------------
+// configuração de variações
+$property: (
+    r: right,
+    c: center,
+    l: left,
+);
+
+// mixin
+@function text-align( $key, $map : $property ){
+    @return map-get($map, $key);
+}
+
+@mixin text-align($item) { property: text-align($item); }
+
+// gera as classes
+@each $scaleKey, $scaleValue in $property {
+    .ta#{$scaleKey}{ text-align: $scaleValue; }
+}
+
+@each $bkKey, $bkValue in $breakpoints {
+    @if($bkValue != 0){
+        @media (min-width: $bkValue) {
+            @each $scaleKey, $scaleValue in $property {
+            @include ddScale( 'ta', $bkKey, $scaleKey){ text-align: $scaleValue; }
+            }
+        }
+    }
+}

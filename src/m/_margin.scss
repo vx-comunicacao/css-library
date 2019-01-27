@@ -1,0 +1,50 @@
+// ---------------------------------------------------------------
+// MARGIN
+// ---------------------------------------------------------------
+
+// configuração de tamanhos ou variações
+$margin: (
+    0: 0,
+    2: 2px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px,
+    30: 30px,
+    35: 35px,
+    40: 40px,
+    50: 50px,
+    60: 60px,
+    70: 70px,
+);
+
+// mixin
+@function m( $key, $map : $margin ){
+    @return map-get($map, $key);
+}
+
+@mixin m($item) { margin: m($item); }
+
+// gera as classes
+@each $scaleKey, $scaleValue in $margin {
+    .mg-#{$scaleKey}{ margin: $scaleValue; }
+    .mgt-#{$scaleKey}{ margin-top: $scaleValue; }
+    .mgl-#{$scaleKey}{ margin-left: $scaleValue; }
+    .mgb-#{$scaleKey}{ margin-bottom: $scaleValue; }
+    .mgr-#{$scaleKey}{ margin-right: $scaleValue; }
+}
+    
+@each $bkKey, $bkValue in $breakpoints {
+    @if($bkValue != 0){
+        @media (min-width: $bkValue) {
+            @each $scaleKey, $scaleValue in $margin {
+            @include ddScale( 'mg-', $bkKey, $scaleKey){ margin: $scaleValue; }
+            @include ddScale( 'mgt-', $bkKey, $scaleKey){ margin-top: $scaleValue; }
+            @include ddScale( 'mgl-', $bkKey, $scaleKey){ margin-left: $scaleValue; }
+            @include ddScale( 'mgb-', $bkKey, $scaleKey){ margin-bottom: $scaleValue; }
+            @include ddScale( 'mgr-', $bkKey, $scaleKey){ margin-right: $scaleValue; }
+            }
+        }
+    }
+}
