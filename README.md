@@ -4,40 +4,40 @@
 ## Sumário
 
 ### C
-- [center-block](https://github.com/t-components/css-library/blob/master/src/c/_center-block.scss)
-- [clearfix](https://github.com/t-components/css-library/blob/master/src/c/_clearfix.scss)
+- [center-block](src/c/_center-block.scss)
+- [clearfix](src/c/_clearfix.scss)
 
 ### D
-- [display](https://github.com/t-components/css-library/blob/master/src/d/_display.scss)
+- [display](src/d/_display.scss)
 
 ### F
-- [float](https://github.com/t-components/css-library/blob/master/src/f/_float.scss)
-- [font-size](https://github.com/t-components/css-library/blob/master/src/f/_font-size.scss)
-- [font-weight](https://github.com/t-components/css-library/blob/master/src/f/_font-weight.scss)
+- [float](src/f/_float.scss)
+- [font-size](src/f/_font-size.scss)
+- [font-weight](src/f/_font-weight.scss)
 
 ### H
-- [hide-text](https://github.com/t-components/css-library/blob/master/src/h/_hide-text.scss)
+- [hide-text](src/h/_hide-text.scss)
 
 ### I
-- [img-full](https://github.com/t-components/css-library/blob/master/src/i/_img-full.scss)
+- [img-full](src/i/_img-full.scss)
 
 ### L
-- [line-height](https://github.com/t-components/css-library/blob/master/src/l/_line-height.scss)
-- [list-reset](https://github.com/t-components/css-library/blob/master/src/l/_list-reset.scss)
+- [line-height](src/l/_line-height.scss)
+- [list-reset](src/l/_list-reset.scss)
 
 ### M
-- [margin](https://github.com/t-components/css-library/blob/master/src/m/_margin.scss)
+- [margin](src/m/_margin.scss)
 
 ### P
-- [padding](https://github.com/t-components/css-library/blob/master/src/p/_padding.scss)
-- [position](https://github.com/t-components/css-library/blob/master/src/p/_position.scss)
-- [px-rem](https://github.com/t-components/css-library/blob/master/src/p/_px-rem.scss)
+- [padding](src/p/_padding.scss)
+- [position](src/p/_position.scss)
+- [px-rem](src/p/_px-rem.scss)
 
 ### T
-- [text-align](https://github.com/t-components/css-library/blob/master/src/t/_text-align.scss)
+- [text-align](src/t/_text-align.scss)
 
 ### V
-- [vertical-align](https://github.com/t-components/css-library/blob/master/src/v/_vertical-align.scss)
+- [vertical-align](src/v/_vertical-align.scss)
 
 ## CSS Funcional
 
@@ -48,7 +48,7 @@ Atenção
 Requer o uso de 'breakpoints' e 'ddScale'. (_required.scss)
 
 ### Font Size 
-[Source](https://github.com/t-components/css-library/blob/master/src/]f/_font-size.scss)
+[Source](src/f/_font-size.scss)
 
 ```html
 fs-{foo} | sm:fs-{foo} | md:fs-{foo} | lg:fs-{foo}
@@ -58,7 +58,7 @@ Exemplo de uso:
 ```
 
 ### Font Weight 
-[Source](https://github.com/t-components/css-library/blob/master/src/f/_font-weight.scss)
+[Source](src/f/_font-weight.scss)
 
 ```html
 fw-{foo} | sm:fw-{foo} | md:fw-{foo} | lg:fw-{foo}
@@ -68,7 +68,7 @@ Exemplo de uso:
 ```
 
 ### Line Height 
-[Source](https://github.com/t-components/css-library/blob/master/src/l/_line-height.scss)
+[Source](src/l/_line-height.scss)
 
 ```html
 lh-{foo} | sm:lh-{foo} | md:lh-{foo} | lg:lh-{foo}
@@ -77,7 +77,7 @@ Exemplo de uso:
 <p class="lh-12 sm:lh-16 md:lh-25 lg:lh-30"></p>
 ```
 ### Display
-[Source](https://github.com/t-components/css-library/blob/master/src/d/_display.scss)
+[Source](src/d/_display.scss)
 
 ```html
 db | sm:db | md:db | lg:db (display: block) 
@@ -91,7 +91,7 @@ Exemplo de uso:
 ```
 
 ### Vertical Align 
-[Source](https://github.com/t-components/css-library/blob/master/src/v/_vertical-align.scss) 
+[Source](src/v/_vertical-align.scss) 
 
 ```html
 vat | sm:vat | md:vat | lg:vat (vertical-align: top) 
@@ -103,7 +103,7 @@ Exemplo de uso:
 ```
 
 ### Float 
-[Source](https://github.com/t-components/css-library/blob/master/src/f/_float.scss)
+[Source](src/f/_float.scss)
 
 ```html
 fl | sm:fl | md:fl | lg:fl (float: left) 
@@ -114,7 +114,7 @@ Exemplo de uso:
 <div class="fr: sm:fl lg:fn"></div>
 ```
 ### Margin 
-[Source](https://github.com/t-components/css-library/blob/master/src/m/_margin.scss) 
+[Source](src/m/_margin.scss) 
 
 ```html
 mg-{foo} | sm:mg-{foo} | md:mg-{foo} | lg:mg-{foo} (margin all)  
@@ -128,7 +128,7 @@ Exemplo de uso:
 ```
 
 ### Padding 
-[Source](https://github.com/t-components/css-library/blob/master/src/p/_padding.scss) 
+[Source](src/p/_padding.scss) 
 
 ```html
 pd-{foo} | sm:pd-{foo} | md:pd-{foo} | lg:pd-{foo} (padding all)  
@@ -142,7 +142,7 @@ Exemplo de uso:
 ```
 
 ### Position 
-[Source](https://github.com/t-components/css-library/blob/master/src/p/_position.scss) 
+[Source](src/p/_position.scss) 
 
 ```html
 pos-a | sm:pos-a | md:pos-a | lg:pos-a (position: absolute)
