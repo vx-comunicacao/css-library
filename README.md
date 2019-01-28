@@ -47,8 +47,8 @@ Atenção
 
 Requer o uso de 'breakpoints' e 'ddScale'. (_required.scss)
 
-### font size 
-[Source]([https://github.com/t-components/css-library/blob/master/src/]f/_font-size.scss)
+### Font Size 
+[Source](https://github.com/t-components/css-library/blob/master/src/]f/_font-size.scss)
 
 ```html
 fs-{foo} | sm:fs-{foo} | md:fs-{foo} | lg:fs-{foo}
@@ -57,7 +57,7 @@ Exemplo de uso:
 <p class="fs-12 sm:fs-16 md:fs-25 lg:fs-30"></p>
 ```
 
-### font weight 
+### Font Weight 
 [Source](https://github.com/t-components/css-library/blob/master/src/f/_font-weight.scss)
 
 ```html
@@ -67,7 +67,7 @@ Exemplo de uso:
 <p class="fw-100 sm:fw-300 md:fw-500 lg:fw-700"></p>
 ```
 
-### line height 
+### Line Height 
 [Source](https://github.com/t-components/css-library/blob/master/src/l/_line-height.scss)
 
 ```html
@@ -76,7 +76,7 @@ lh-{foo} | sm:lh-{foo} | md:lh-{foo} | lg:lh-{foo}
 Exemplo de uso:
 <p class="lh-12 sm:lh-16 md:lh-25 lg:lh-30"></p>
 ```
-### display
+### Display
 [Source](https://github.com/t-components/css-library/blob/master/src/d/_display.scss)
 
 ```html
@@ -90,7 +90,7 @@ Exemplo de uso:
 <ul class="di"><li class="sm:di"><li></ul>
 ```
 
-### vertical align 
+### Vertical Align 
 [Source](https://github.com/t-components/css-library/blob/master/src/v/_vertical-align.scss) 
 
 ```html
@@ -102,8 +102,8 @@ Exemplo de uso:
 <div class="vat md:vam lg:vab"></div>
 ```
 
-### floats 
-[Source](https://github.com/t-components/css-library/blob/master/src/f/_floats.scss)
+### Float 
+[Source](https://github.com/t-components/css-library/blob/master/src/f/_float.scss)
 
 ```html
 fl | sm:fl | md:fl | lg:fl (float: left) 
@@ -113,7 +113,7 @@ fn | sm:fn | md:fn | lg:fn (float: none)
 Exemplo de uso:
 <div class="fr: sm:fl lg:fn"></div>
 ```
-### margin 
+### Margin 
 [Source](https://github.com/t-components/css-library/blob/master/src/m/_margin.scss) 
 
 ```html
@@ -127,7 +127,7 @@ Exemplo de uso:
 <div class="mg-5 sm:mg-15 md:mg-25 lg:mg-50"></div>
 ```
 
-### padding 
+### Padding 
 [Source](https://github.com/t-components/css-library/blob/master/src/p/_padding.scss) 
 
 ```html
@@ -141,7 +141,7 @@ Exemplo de uso:
 <div class="pd-5 sm:pd-15 md:pd-25 lg:pd-50"></div>
 ```
 
-### position 
+### Position 
 [Source](https://github.com/t-components/css-library/blob/master/src/p/_position.scss) 
 
 ```html
