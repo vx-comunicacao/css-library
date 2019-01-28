@@ -1,0 +1,7 @@
+@mixin img-full() {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+// .img-full { @include img-full(); }

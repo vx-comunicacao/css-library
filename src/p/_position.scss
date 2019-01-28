@@ -1,0 +1,74 @@
+// ---------------------------------------------------------------
+// POSITION
+// ---------------------------------------------------------------
+// configuração de tamanhos ou variações
+$position: (
+    a: absolute,
+    r: relative,
+    s: static,
+    f: fixed,
+);
+
+// mixin
+@function position( $key, $map : $position ){
+    @return map-get($map, $key);
+}
+
+@mixin position($item) { atribute: position($item); }
+
+// gera as classes
+@each $scaleKey, $scaleValue in $position {
+    .pos-#{$scaleKey}{ position: $scaleValue; }
+}
+
+@each $bkKey, $bkValue in $breakpoints {
+    @if($bkValue != 0){
+        @media (min-width: $bkValue) {
+            @each $scaleKey, $scaleValue in $position {
+            @include ddScale( 'pos-', $bkKey, $scaleKey){ position: $scaleValue; }
+            }
+        }
+    }
+}
+
+// ---------------------------------------------------------------
+// POSITION ATRIBUTE
+// ---------------------------------------------------------------
+
+// configuração de tamanhos ou variações
+$spacing: (
+    0: 0,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+);
+
+// mixin
+@function pos-atribute( $key, $map : $spacing ){
+    @return map-get($map, $key);
+}
+
+@mixin pos-atribute($item) { spacing: pos-atribute($item); }
+
+// gera as classes
+@each $scaleKey, $scaleValue in $spacing {
+    .top-#{$scaleKey}{ top: $scaleValue; }
+    .right-#{$scaleKey}{ right: $scaleValue; }
+    .bottom-#{$scaleKey}{ bottom: $scaleValue; }
+    .left-#{$scaleKey}{ left: $scaleValue; }
+}
+    
+@each $bkKey, $bkValue in $breakpoints {
+    @if($bkValue != 0){
+        @media (min-width: $bkValue) {
+            @each $scaleKey, $scaleValue in $spacing {
+            @include ddScale( 'top-', $bkKey, $scaleKey){ top: $scaleValue; }
+            @include ddScale( 'right-', $bkKey, $scaleKey){ right: $scaleValue; }
+            @include ddScale( 'bottom-', $bkKey, $scaleKey){ bottom: $scaleValue; }
+            @include ddScale( 'left-', $bkKey, $scaleKey){ left: $scaleValue; }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,45 @@
+// ---------------------------------------------------------------
+// FONT WEIGHT
+// ---------------------------------------------------------------
+
+// configuração de tamanhos ou variações
+$font-weight : (
+    100     :100,
+    200     :200,
+    300     :300,
+    400     :400,
+    500     :500,
+    600     :600,
+    700     :700,
+    800     :800,
+    900     :900,
+);
+
+// mixin
+@function fw( $color, $map : $font-weight ){
+    $key: unquote($color);
+    @return map-get($map, $key);
+}
+
+@mixin fw($item) { font-weight: fw($item); }
+
+// gera as classes
+@each $key, $value in $font-weight {
+    .fw-#{$key}{
+      font-weight: $value;
+    }
+}
+  
+$prefix-class: fw-;
+$scale: $font-weight;
+
+@each $keyBp, $valueBp in $breakpoints {
+    @media (min-width: $valueBp) {
+        @each $keyScale, $valueScale in $scale {
+            $classe: $prefix-class + $keyScale;
+            .#{$keyBp}#{$breakpoint-separator}#{$classe} {
+                font-weight: $valueScale;
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+// ---------------------------------------------------------------
+// FONT SIZE 
+// ---------------------------------------------------------------
+
+// configuração de tamanhos ou variações
+$font-size : (
+    12:     12px,
+    14:     14px,
+    16:     16px,
+    18:     18px,
+    20:     20px,
+    26:     26px,
+    30:     30px,
+    40:     40px,
+    50:     50px,
+    64:     64px,
+);
+
+// mixin
+@function fs( $key, $map : $font-size ){
+    @return map-get($map, $key);
+}
+
+@mixin fs($item) { font-size: fs($item); }
+
+// gera as classes
+@each $key, $value in $font-size {
+    .fs-#{$key}{
+        font-size: $value;
+    }
+}
+   
+$prefix-class: fs-;
+$scale: $font-size;
+
+@each $keyBp, $valueBp in $breakpoints {
+    @media (min-width: $valueBp) {
+        @each $keyScale, $valueScale in $scale {
+            $classe: $prefix-class + $keyScale;
+            .#{$keyBp}#{$breakpoint-separator}#{$classe} {
+            font-size: $valueScale;
+            }
+        }
+    }
+}
